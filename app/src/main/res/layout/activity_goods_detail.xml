@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_goods_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/goods_pic"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:scaleType="centerCrop"
+        tools:background="@drawable/bg_src_tianjin"/>
+
+    <TextView
+        android:id="@+id/goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_pic"
+        android:textColor="#333333"
+        android:textSize="22sp"
+        android:layout_margin="10dp"
+        tools:text="品名:哇哈哈矿泉水"/>
+
+    <TextView
+        android:id="@+id/goods_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_name"
+        android:textSize="16sp"
+        android:textColor="#888888"
+        tools:text="简介:纯天然，我们是大自然的搬运工"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/goods_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_desc"
+        android:textColor="#FF4401"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        tools:text="单价:13元"/>
+
+    <TextView
+        android:id="@+id/add_to_cart"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="加入购物车"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:background="@drawable/bg_add_to_cart"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

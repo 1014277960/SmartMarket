@@ -1,0 +1,201 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.smartmarket.fragment.phone.RegisterFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textColor="#cfffffff"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_account_input"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_phone"
+                android:tint="@color/colorAccent"/>
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="20dp"
+                android:hint="call"
+                android:inputType="phone"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textColor="#4e5864"
+                android:textColorHint="#8d9ca9"
+                android:textCursorDrawable="@drawable/ic_cursor"
+                android:textSize="14sp"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#20000000"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"/>
+
+        <LinearLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_key"
+                android:tint="@color/colorAccent"/>
+
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textColor="#4e5864"
+                android:textColorHint="#8d9ca9"
+                android:textCursorDrawable="@drawable/ic_cursor"
+                android:textSize="14sp"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#20000000"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"/>
+
+        <LinearLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_person"
+                android:tint="@color/colorAccent"/>
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="20dp"
+                android:hint="name"
+                android:inputType="text"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textColor="#4e5864"
+                android:textColorHint="#8d9ca9"
+                android:textCursorDrawable="@drawable/ic_cursor"
+                android:textSize="14sp"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/text_go_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="16dp"
+            android:text="已有帐号？去登陆"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="end|center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_direction_right"
+            android:tint="@android:color/white"/>
+
+    </FrameLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/submit_register"
+        android:clickable="true"
+        android:layout_width="172dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_register_button"
+        android:text="注册"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginBottom="26dp"/>
+
+</LinearLayout>
