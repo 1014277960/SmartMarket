@@ -47,7 +47,7 @@ public interface RemoteService {
     @PUT("cart/deleteGoodsFromCart")
     Call<RspModel<List<Cart>>> deleteGoods(@Body DeleteGoodsModel model);
 
-    @GET("goods/id/{id}")
-    Call<RspModel<Goods>> getGoodsById(@Path(value = "id") String goodsId);
+    @GET("goods/code/{code}")
+    Call<RspModel<Goods>> getGoodsByCode(@Path(value = "code") String code);
 
 }

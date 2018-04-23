@@ -25,9 +25,9 @@ public class GoodsHelper {
         call.enqueue(new GoodsListRspCallback(callback));
     }
 
-    public static void getGoodsById(String id, final DataSource.Callback<Goods> callback) {
+    public static void getGoodsByCode(String code, final DataSource.Callback<Goods> callback) {
         RemoteService service = NetWork.remote();
-        Call<RspModel<Goods>> call = service.getGoodsById(id);
+        Call<RspModel<Goods>> call = service.getGoodsByCode(code);
         call.enqueue(new GoodsRspCallback(callback));
     }
 

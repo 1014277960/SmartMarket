@@ -33,9 +33,6 @@ import butterknife.OnClick;
 
 public class GoodsDetailActivity extends BaseActivity implements AddToCartFragment.OnSelectListener, DataSource.Callback<List<Cart>> {
 
-    // 0:id
-    // 1:barcode
-    private final static String KEY_CODE_TYPE = "KEY_CODE_TYPE";
     private final static String KEY_CODE = "KEY_CODE";
 
     private int mCodeType;
@@ -54,13 +51,12 @@ public class GoodsDetailActivity extends BaseActivity implements AddToCartFragme
 
     private AddToCartFragment mAddToCartFragment;
 
-    public static void show(Context context, @Nullable String goodsId, @Nullable String barcode) {
-        if (TextUtils.isEmpty(goodsId) && TextUtils.isEmpty(barcode)) {
+    public static void show(Context context, @Nullable String code, @Nullable String barcode) {
+        if (TextUtils.isEmpty(code)) {
             return;
         }
         Intent intent = new Intent(context, GoodsDetailActivity.class);
-        intent.putExtra(KEY_CODE_TYPE, TextUtils.isEmpty(goodsId)? 1: 0);
-        intent.putExtra(KEY_CODE, TextUtils.isEmpty(goodsId)? barcode: goodsId);
+        intent.putExtra(KEY_CODE, code);
         context.startActivity(intent);
     }
 
@@ -71,7 +67,6 @@ public class GoodsDetailActivity extends BaseActivity implements AddToCartFragme
      */
     @Override
     protected boolean initArgs(Intent intent) {
-        mCodeType = intent.getIntExtra(KEY_CODE_TYPE, -1);
         mCode = intent.getStringExtra(KEY_CODE);
 
         return (mCodeType == 1 || mCodeType == 0) && !TextUtils.isEmpty(mCode);

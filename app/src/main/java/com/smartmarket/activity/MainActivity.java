@@ -164,15 +164,15 @@ public class MainActivity extends BaseActivity
         Log.d("Debug", format.name() + ":" + code);
         if (format == BarcodeFormat.QR_CODE) {
             // 如果是二维码，那么code代表商品id
-            getGoodsById(code);
+            getGoodsByCode(code);
         } else {
             // TODO: 18/3/6 barcode的解析
             App.showToast("not QRCode");
         }
     }
 
-    private void getGoodsById(final String id) {
-        GoodsHelper.getGoodsById(id, new DataSource.Callback<Goods>() {
+    private void getGoodsByCode(final String id) {
+        GoodsHelper.getGoodsByCode(id, new DataSource.Callback<Goods>() {
             @Override
             public void onDataLoadFailed(String msg) {
                 App.showToast(msg);
